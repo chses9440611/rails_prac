@@ -53,7 +53,7 @@ class CandidatesController < ApplicationController
 	private
 	#below only for inner
 	def	candidate_params
-		params.require(:candidate).permit(:name, :age, :party, :politics)
+		params.require(:candidate).permit(:name, :age, :party, :politics, :experience)
 	end
 	
 	def find_candidate
