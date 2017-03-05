@@ -1,0 +1,20 @@
+<h1>Add new candidate</h1>
+<%= form_for(@candidate) do |f| %>
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name %><br />
+
+	<%= f.label :age, "Age" %>
+	<%= f.text_field :age %><br />
+
+	<%= f.label :age, "Party" %>
+	<%= f.text_field :party %> <br />
+
+	<%= f.label :politics, "Politics" %>
+	<%= f.text_area :politics%> <br />
+
+	<%= f.submit %>
+<% end %>
+
+<br />
+
+<%= link_to 'return to candidates list', candidates_path %>

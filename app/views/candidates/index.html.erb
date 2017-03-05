@@ -1,0 +1,33 @@
+<h1>Candidates list</h1>
+
+<%= icon_link_to "Add new candidate", new_candidate_path, "knight" %>
+<table class = "table">
+	<thead>
+		<tr>
+			<td>Vote</td>
+			<td>Name</td>
+			<td>Age</td>
+			<td>Party</td>
+			<td>Politics</td>
+			<td>Votes</td>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @candidates.each do |candidate| %>
+		<tr>
+			<td><%= link_to "Vote for this", vote_candidate_path(candidate), method: "post", data: { confirm: "Are you sure to vote this candidate?" }, class: "btn btn-danger btn-xs" %></td>
+				<td><%= candidate.name %></td>
+				<td><%= candidate.age %></td>
+				<td><%= candidate.party %></td>
+				<td><%= candidate.politics %></td>
+				<td><%= candidate.votes %></td>
+				<td>
+				<%= link_to "Edit", edit_candidate_path(candidate) %>
+				<%= link_to "Delete", candidate_path(candidate), method: "delete", data:{confirm: "delete succeed!"} %>
+				</td>
+				
+			</tr>
+		<% end %>
+	</tbody>
+</table>

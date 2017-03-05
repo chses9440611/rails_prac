@@ -1,0 +1,11 @@
+<%= simple_form_for(@candidate) do |f| %>
+	<%= f.input :name, label: "Name" %><br/>
+	<%= f.input :age, label: "Age" %><br/>
+	<%= f.input :party, label: "Party" %><br/>
+	<%= f.input :politics, label: "Politics" %> <br/>
+	<%= f.submit%>
+<% end %>
+
+<br/>
+
+<%= link_to 'Candidates list', candidates_path %>
