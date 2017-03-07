@@ -1,6 +1,6 @@
 class Candidate < ApplicationRecord
-	#validates :name, presence:true
-	validate :name_validator
+	validates :name, begin_with_hello: true
+#	validate :name_validator
 
 	private
 	def name_validator
@@ -9,3 +9,4 @@ class Candidate < ApplicationRecord
 		end
 	end
 end
+
