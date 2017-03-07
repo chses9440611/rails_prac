@@ -1,5 +1,5 @@
 class Candidate < ApplicationRecord
-	validates :name, begin_with_hello: true
+	validates :name,presence: true, begin_with_hello: true
 #	validate :name_validator
 
 	private
